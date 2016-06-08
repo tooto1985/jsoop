@@ -1,15 +1,8 @@
-//簡化程式碼
-var foo;
-var o = {bar: 1};
-with(o) {
-    foo = bar;
+function f(foo, val) {
+    with(foo) {
+        console.log(val);
+    }
 }
-console.log(foo); //1
-
-//變數是否有定義決定結果
-var bar=1;
-var o={foo:0};
-with(o) {
-    foo = bar;
-}
-console.log(foo); //undefined
+f({}); //沒有錯誤訊息
+f({}, 1); //1
+f({val: "val"}, 1); //"val"

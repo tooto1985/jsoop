@@ -1,0 +1,51 @@
+function Player(name) {
+    this.points = 0;
+    this.name = name;
+}
+Player.prototype.play = function() {
+    this.points += 1;
+    mediator.played();
+};
+var scoreboard = {
+    element: document.body,
+    update: function(score) {
+        var i, msg = '';
+        for (i in score) {
+            if (score.hasOwnProperty(i)) {
+                msg += '<p><strong>' + i + '<\/strong>:';
+                msg += score[i];
+                msg += '<\/p>';
+            }
+        }
+        this.element.innerHTML = msg;
+    }
+};
+var mediator = {
+    Players: {},
+    setUp: function() {
+        var Players = this.Players;
+        Players.home = new Player("Home");
+        Players.guest = new Player("Guest");
+    },
+    played: function() {
+        var Players = this.Players,
+            score = {
+                Home: Players.home.points,
+                Guest: Players.guest.points
+            };
+        scoreboard.update(score);
+    },
+    keypress: function(e) {
+        e = e || window.event;
+        if (e.which === 48) {
+            mediator.Players.home.play();
+            return;
+        }
+        if (e.which === 49) {
+            mediator.Players.guest.play();
+            return;
+        }
+    }
+};
+mediator.setUp();
+window.onkeypress = mediator.keypress;
