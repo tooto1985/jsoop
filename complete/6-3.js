@@ -10,10 +10,13 @@ var OrangeJuice = function() {
 var DrinkShop = function() {
     this.sellDrink = function(type) {
         var drink;
-        if (typeof window[type] !== "function") {
-            type="OrangeJuice"; //Default
+        if (type === "Coffee") {
+            drink = new Coffee();
+        } else if (type === "Milk") {
+            drink = new Milk();
+        } else {
+            drink = new OrangeJuice();    
         }
-        drink = new window[type]();
         drink.showColor = function() {
             console.log("Drink color:" + drink.color);
         };
@@ -21,4 +24,4 @@ var DrinkShop = function() {
     };
 };
 var drinkShop = new DrinkShop();
-drinkShop.sellDrink("milk").showColor(); //Drink color:white
+drinkShop.sellDrink("Milk").showColor(); //Drink color:white

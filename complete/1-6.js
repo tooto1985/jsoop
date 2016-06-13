@@ -1,4 +1,5 @@
 function run(a, b) {
-    //a=10, b=20, ?=30
+    console.log(a); //10
+    console.log(b); //20
 }
 run(10, 20, 30);
