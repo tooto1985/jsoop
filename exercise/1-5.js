@@ -1,0 +1,10 @@
+console.log(!!"");
+console.log(!!0);
+console.log(!!null);
+console.log(!!undefined);
+console.log(!!NaN);
+console.log(!!"hello");
+console.log(!!1);
+console.log(!!{});
+console.log(!![]);
+console.log(!!Infinity);
