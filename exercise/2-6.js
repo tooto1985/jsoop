@@ -2,9 +2,8 @@ var name = "A";
 var obj = {
     name: "B",
     getName: function() {
-        var that = this;
         return function() {
-            return that.name;
+            return this.name;
         };
     }
 };
