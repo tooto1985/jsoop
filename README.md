@@ -1,4 +1,4 @@
-﻿jsoop-Example
+﻿JSOOP-Example
 =============================
 
 #clone
