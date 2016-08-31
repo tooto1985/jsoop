@@ -10,13 +10,10 @@ var OrangeJuice = function() {
 var DrinkShop = function() {
     this.sellDrink = function(type) {
         var drink;
-        if (type === "Coffee") {
-            drink = new Coffee();
-        } else if (type === "Milk") {
-            drink = new Milk();
-        } else {
-            drink = new OrangeJuice();    
+        if (typeof window[type] !== "function") {
+            type = "OrangeJuice"; //Default
         }
+        drink = new window[type]();
         drink.showColor = function() {
             console.log("Drink color:" + drink.color);
         };

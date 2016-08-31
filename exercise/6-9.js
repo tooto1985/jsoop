@@ -9,12 +9,12 @@ Player.prototype.play = function() {
 var scoreboard = {
     element: document.body,
     update: function(score) {
-        var i, msg = '';
+        var i, msg = "";
         for (i in score) {
             if (score.hasOwnProperty(i)) {
-                msg += '<p><strong>' + i + '<\/strong>:';
+                msg += "<p><strong>" + i + "<\/strong>:";
                 msg += score[i];
-                msg += '<\/p>';
+                msg += "<\/p>";
             }
         }
         this.element.innerHTML = msg;

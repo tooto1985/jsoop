@@ -15,13 +15,10 @@ var DrinkShop = function() {
     
     
     
-      
-    
-    
     
     
     
     };
 };
 var drinkShop = new DrinkShop();
-drinkShop.sellDrink("Milk").showColor();
+drinkShop.sellDrink("Milk").showColor(); //Drink color:white
