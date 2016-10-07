@@ -15,5 +15,5 @@ function foo(b) {
     return (a + b);
 }
 (function(x) {
-    foo (x);
+    foo(x);
 })();
