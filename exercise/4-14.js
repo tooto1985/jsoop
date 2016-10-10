@@ -1,10 +1,10 @@
 function CreatePerson() {
-    Object.defineProperty(this, "name", {
-        value: "Mark",
-        enumerable: true,
-        writable: false,
-        configurable: true
-    });
+
+
+
+
+
+
 }
 CreatePerson.prototype.getName = function() {
     console.log(this.name);
