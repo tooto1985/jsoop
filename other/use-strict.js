@@ -1,3 +1,5 @@
+//https://msdn.microsoft.com/zh-tw/library/br230269(v=vs.94).aspx
+
 (function() {
     "use strict";
     testvar = 4;
@@ -51,7 +53,7 @@
         prop1: 20
     };
     //strict 模式中不允許屬性有多個定義
-})(); //5
+})(); //5.
 
 (function() {
     "use strict";
@@ -88,7 +90,7 @@
     }
     var testvar = testFunc();
     //如果不是在 strict 模式下，testvar 的值是全域物件，但是其值在 strict 模式下則是 undefined。
-})(); //9
+})(); //9.
 
 (function() {
     "use strict";
@@ -132,7 +134,7 @@
     }
     testArgs(10);
     //如果不是在 strict 模式下，您可以變更 arguments[0] 的值來變更 oneArg 參數的值，因此 oneArg 和 arguments[0] 的值都是 20；在 strict 模式下，因為 arguments 物件只是區域複本，所以變更 arguments[0] 的值並不會影響 oneArg 的值。
-})(); //14
+})(); //14.
 
 (function() {
     "use strict";

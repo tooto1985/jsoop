@@ -4,22 +4,22 @@ var agg = (function() {
         length = data.length;
     return {
         next: function() {
-            
-            
-            
-            
-            
-            
-            
+
+
+
+
+
+
+
         },
         hasNext: function() {
-            
+
         },
         rewind: function() {
-            
+
         },
         current: function() {
-            
+
         }
     };
 })();
