@@ -1,25 +1,34 @@
 document.addEventListener("DOMContentLoaded", function() {
     var data = [15, 16, 11, 20, 11, [1, 2, 3, 4, 5, 6, 7, 8, 9, "9-2", 10]],
         hash = location.hash.substr(1),
-        i, imax, j, jmax,
         option = document.createElement("option"),
-        options,
         script = document.createElement("script"),
-        select = document.createElement("select");
+        select = document.createElement("select"),
+        i, imax, j, jmax, o, options;
     select.appendChild(option);
     for (i = 0, imax = data.length; i < imax; i++) {
-        var jmax = data[i];
+        jmax = data[i];
         if (typeof data[i] !== "number") {
             jmax = data[i].length;
         }
-        for (var j = 0; j < jmax; j++) {
+        for (j = 0; j < jmax; j++) {
             option = document.createElement("option");
-            if (typeof data[i] === "number") {
-                option.text = (i + 1) + "-" + (j + 1) + ".js";
-            } else {
-                option.text = (i + 1) + "-" + data[i][j] + ".js";
+            o = {
+                main: i + 1,
+                sub: j + 1
+            };
+            if (data[i] instanceof Array) {
+                o.sub = data[i][j];
             }
+            o.value = o.main + "-" + o.sub;
+            option.text = o.value + ".js";
             select.appendChild(option);
+            Object.defineProperty(window, "to" + o.value.replace("-", "_"), {
+                get: function(o) {
+                    location.hash = o.value + ".js";
+                    location.reload();
+                }.bind(this, o)
+            });
         }
     }
     document.body.appendChild(select);
