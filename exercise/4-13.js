@@ -3,7 +3,7 @@ function CreatePerson(name, sex, year) {
     this.sex = sex;
 
 
- 
+
 
 
 

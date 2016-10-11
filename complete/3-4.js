@@ -3,6 +3,6 @@ function f(foo, val) {
         console.log(val);
     }
 }
-f({}); //沒有錯誤訊息
+f({}); //undefined
 f({}, 1); //1
 f({val: "val"}, 1); //"val"
