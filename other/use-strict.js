@@ -53,7 +53,7 @@
         prop1: 20
     };
     //strict 模式中不允許屬性有多個定義
-})(); //5.
+})(); //5(IE only)
 
 (function() {
     "use strict";

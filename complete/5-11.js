@@ -36,9 +36,9 @@ RangePoint.prototype.write = function(x,y) {
     y = y < this.min ? this.min : y;
     y = y > this.max ? this.max : y;
     if (this.constructor === RangePoint) {
-        this.constructor.uber.write.apply(this,arguments)  
+        this.constructor.uber.write.apply(this,arguments);
     } else if (this.constructor === IntegerRangePoint) {
-        this.constructor.uber.constructor.uber.write.apply(this,arguments); 
+        this.constructor.uber.constructor.uber.write.apply(this,arguments);
     }
 };
 var rp = new RangePoint(-50,50);
