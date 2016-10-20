@@ -1,11 +1,9 @@
-function f(x) {
-    var temp = x;
-    return function(x) {
-        temp += x;
-        console.log(temp);
+var add = (function() {
+    var count=0;
+    return function() {
+        return count += 1;
     };
-}
-var a = f(50);
-a(5); //55
-a(10); //65
-a(20); //85
+})();
+console.log(add()); //1
+console.log(add()); //2
+console.log(add()); //3
