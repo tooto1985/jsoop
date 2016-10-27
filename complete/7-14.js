@@ -6,7 +6,6 @@ var obj = {
     y: y
 };
 console.log(obj);
-
 //es6
 var x = 100;
 var y = 200;

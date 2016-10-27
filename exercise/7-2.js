@@ -8,7 +8,6 @@ Object.defineProperty(typeof global === "object" ? global : window, "PI1", {
 console.log(PI1); //3.1415926
 PI1 = 100;
 console.log(PI1); //3.1415926
-
 //es6
 
 console.log(PI2); //3.1415926

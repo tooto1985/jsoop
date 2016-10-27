@@ -7,7 +7,6 @@ function link1(height, color, url) {
 }
 link1(null, "Blue");
 link1(undefined, "", "http://www.xyz.com");
-
 //es6
 
 

@@ -15,7 +15,6 @@ var defRectangle = Rectangle1.defaultRectangle();
 console.log(defRectangle);
 var defCircle = Circle1.defaultCircle();
 console.log(defCircle);
-
 //es6
 
 

@@ -9,7 +9,6 @@ Object.keys(src2).forEach(function(k) {
     dst[k] = src2[k];
 });
 console.log(dst);
-
 //es6
 var dst  = {quux: 0}
 var src1 = {foo: 1, bar: 2}

@@ -7,7 +7,6 @@
     })();
     console.log(a);
 })();
-
 //es6
 {
     let a = 5;

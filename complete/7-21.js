@@ -5,7 +5,6 @@ function f1(obj) {
     console.log(name, age);
 }
 f1({name: "John", age: 30});
-
 //es6
 function f2({name, age}) {
     console.log(name, age);

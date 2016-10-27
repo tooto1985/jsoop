@@ -9,7 +9,6 @@ Shape1.prototype.move = function(x, y) {
 };
 var a = new Shape1("a", 0, 0);
 console.log(a);
-
 //es6
 
 

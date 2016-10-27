@@ -11,7 +11,6 @@ var r = range1(0, 10, 2);
 for (var i = 0; i < r.length; i++) {
     console.log(r[i]); // 0, 2, 4, 6, 8
 }
-
 //es6
 function* range2(start, end, step) {
     while (start < end) {

@@ -8,7 +8,6 @@ var name = obj.name;
 var age = obj.age;
 var sex = obj.sex;
 console.log(name, age, sex);
-
 //es6
 var obj = {
     name: "John",

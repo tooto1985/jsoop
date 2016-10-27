@@ -5,7 +5,6 @@ var b = list[1] ? list[1] : 2;
 var c = list[2] ? list[2] : 3;
 var d = list[3] ? list[3] : undefined;
 console.log(a, b, c, d);
-
 //es6
 var list = [7, 42];
 var [a = 1, b = 2, c = 3, d] = list;

@@ -5,7 +5,6 @@ function f1(ary) {
     console.log(name, age);
 }
 f1(["John", 30]);
-
 //es6
 
 

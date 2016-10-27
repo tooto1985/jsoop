@@ -5,7 +5,6 @@ function f1(obj) {
     console.log(name, age);
 }
 f1({name: "John", age: 30});
-
 //es6
 
 

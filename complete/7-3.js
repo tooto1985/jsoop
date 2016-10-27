@@ -9,7 +9,6 @@ Object.defineProperty(typeof global === "object" ? global : window, "DATA1", {
 });
 DATA1.content = "xyz";
 console.log(DATA1.content);
-
 //es6
 const DATA2 = {
     content: "abc"

@@ -12,7 +12,6 @@ var lastName = obj.name.lastName;
 var age = obj.age;
 var sex = obj.sex;
 console.log(firstName, lastName, age, sex);
-
 //es6
 var obj = {
     name: {

@@ -29,7 +29,6 @@ var a = new Rectangle1("a", 0, 0, 100, 100);
 console.log(a);
 var b = new Circle1("b", 0, 0, 100);
 console.log(b);
-
 //es6
 class Shape2 {
     constructor(id, x, y) {

@@ -3,7 +3,6 @@ function run1(a, b) {
     console.log(arguments);
 }
 run1(10, 20, 30);
-
 //es6
 
 

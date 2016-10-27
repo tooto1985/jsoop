@@ -36,7 +36,6 @@ fetchAll([
 },function(err) {
     console.log("err:", err);
 });
-
 //es6
 function asyncTask2(success, time) {
     return new Promise((resolve, reject) => {
@@ -58,4 +57,3 @@ Promise.all([
 }, err => {
     console.log("err:", err);
 });
-

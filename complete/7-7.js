@@ -8,7 +8,6 @@ document.show1 = function() {
     });
 };
 document.show1();
-
 //es6
 document.show2 = function() {
     ["how", "ary", "you"].forEach(value => {

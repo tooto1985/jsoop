@@ -7,7 +7,6 @@
     })();
     console.log(foo());
 })();
-
 //es6
 {
     function foo() { return 1; }

@@ -22,7 +22,6 @@ Rectangle1.prototype = {
 };
 var r = new Rectangle1(50, 20);
 console.log(r.area === 1000);
-
 //es6
 class Rectangle2 {
     constructor(width, height) {

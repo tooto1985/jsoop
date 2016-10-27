@@ -11,7 +11,6 @@ console.log(isFinite(Infinity) === false);
 console.log(isFinite(-Infinity) === false);
 console.log(isFinite(NaN) === false);
 console.log(isFinite(123) === true);
-
 //es6
 console.log(Number.isNaN(42) === false);
 console.log(Number.isNaN(NaN) === true);
