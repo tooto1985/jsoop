@@ -37,11 +37,11 @@ var mediator = {
     },
     keypress: function(e) {
         e = e || window.event;
-        if (e.which === 48) {
+        if (e.keyCode === 48) {
             mediator.Players.home.play();
             return;
         }
-        if (e.which === 49) {
+        if (e.keyCode === 49) {
             mediator.Players.guest.play();
             return;
         }
