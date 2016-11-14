@@ -12,9 +12,9 @@ var scoreboard = {
         var i, msg = "";
         for (i in score) {
             if (score.hasOwnProperty(i)) {
-                msg += "<p><strong>" + i + "<\/strong>:";
+                msg += "<p><b>" + i + "</b>:";
                 msg += score[i];
-                msg += "<\/p>";
+                msg += "</p>";
             }
         }
         this.element.innerHTML = msg;
