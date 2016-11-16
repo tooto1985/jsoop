@@ -1,0 +1,15 @@
+var a = 10;
+console.log(a.toString(2));
+console.log((5).toString(2));
+console.log(2 .toString(2));
+console.log(1..toString(2));
+console.log((0.125).toString(2));
+console.log((0.25).toString(2));
+console.log((0.25).toString(2));
+console.log((0.5).toString(2));
+console.log((0.75).toString(2));
+console.log((0.875).toString(2));
+console.log((0.1).toString(2));
+console.log((0.2).toString(2));
+console.log((0.3).toString(2));
+console.log((0.4).toString(2));

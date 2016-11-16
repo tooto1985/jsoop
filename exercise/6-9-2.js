@@ -39,7 +39,7 @@ var mediator = {
         e = e || window.event;
         for (var player in mediator.Players) {
             player = mediator.Players[player];
-            if (e.which === player.key) {
+            if (e.keyCode === player.key) {
                 player.obj.play();
                 return;
             }

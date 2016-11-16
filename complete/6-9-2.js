@@ -12,9 +12,9 @@ var scoreboard = {
         var i, msg = "";
         for (i in score) {
             if (score.hasOwnProperty(i)) {
-                msg += "<p><strong>" + i + "<\/strong>:";
+                msg += "<p><b>" + i + "</b>:";
                 msg += score[i];
-                msg += "<\/p>";
+                msg += "</p>";
             }
         }
         this.element.innerHTML = msg;
@@ -39,7 +39,7 @@ var mediator = {
         e = e || window.event;
         for (var player in mediator.Players) {
             player = mediator.Players[player];
-            if (e.which === player.key) {
+            if (e.keyCode === player.key) {
                 player.obj.play();
                 return;
             }

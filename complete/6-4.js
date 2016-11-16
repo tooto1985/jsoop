@@ -1,4 +1,4 @@
-var agg = (function() {
+var egg = (function() {
     var index = 0,
         data = [1, 2, 3, 4, 5],
         length = data.length;
@@ -23,8 +23,8 @@ var agg = (function() {
         }
     };
 })();
-agg.rewind();
-while (agg.hasNext()) {
-    console.log(agg.current());
-    agg.next();
+egg.rewind();
+while (egg.hasNext()) {
+    console.log(egg.current());
+    egg.next();
 }
