@@ -4,25 +4,25 @@ var car = {
     run: function() {console.log("run");}
 };
 function ProxyCar(car) {
-    this.isStarted = false;
+    var isStarted = false;
     this.startEngine = function() {
-        if (this.isStarted) {
+        if (isStarted) {
             console.log("It is already started!");
         } else {
             car.startEngine();
-            this.isStarted = true;
+            isStarted = true;
         }
     };
     this.stopEngine = function() {
-        if (!this.isStarted) {
+        if (!isStarted) {
             console.log("It is already stopped!");
         } else {
             car.stopEngine();
-            this.isStarted = false;
+            isStarted = false;
         }
     };
     this.run = function() {
-        if (!this.isStarted) {
+        if (!isStarted) {
             console.log("You have to start the engine first!");
         } else {
             car.run();
