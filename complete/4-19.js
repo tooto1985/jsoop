@@ -1,9 +1,11 @@
 var json = {
-    a: 12,
+    name: "John",
     show: function() {
-        console.log(this.a);
+        console.log(this.name);
     },
-    b: json.a
+    empty: undefined,
+    nothing: null
 };
-json.show();
-json.b;
+var jsonString = JSON.stringify(json);
+console.log(jsonString);
+var jsonObject = JSON.parse(jsonString);
