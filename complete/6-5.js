@@ -2,9 +2,6 @@ function Computer() {
     this.cost = function() {
         return 41900;
     };
-    this.screenSize = function() {
-        return 12;
-    };
 }
 function addMemory(pc) { //Decorator 1 - 增加記憶體需多增$10000
     var v = pc.cost();

@@ -1,6 +1,6 @@
 var a = 100;
 (function(){
-    var local = true;
+    var b = true;
     console.log(a); //100;
 })();
-console.log(local); //local is not defined
+console.log(b); //b is not defined
