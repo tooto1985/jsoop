@@ -1,3 +1,3 @@
-if (!o) { //(Bad)
-    var o = {};
+if (!o) {
+    var o = {}; //(Bad)
 }

@@ -7,7 +7,7 @@ if (a) {
 if (a = b) {
     console.log("a=b");
 }
-//但我們常常會看成
+//但我們常常會看成這樣
 if (a == b) {
     console.log("a==b");
 }
