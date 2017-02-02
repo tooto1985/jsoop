@@ -5,13 +5,13 @@ var obj = {
         lastName: "Lin"
     },
     age: 30,
-    sex: "man"
+    gender: "male"
 };
 var firstName = obj.name.firstName;
 var lastName = obj.name.lastName;
 var age = obj.age;
-var sex = obj.sex;
-console.log(firstName, lastName, age, sex);
+var gender = obj.gender;
+console.log(firstName, lastName, age, gender);
 //es6
 var obj = {
     name: {
@@ -19,7 +19,7 @@ var obj = {
         lastName: "Lin"
     },
     age: 30,
-    sex: "man"
+    gender: "male"
 };
 
-console.log(firstName, lastName, age, sex);
+console.log(firstName, lastName, age, gender);

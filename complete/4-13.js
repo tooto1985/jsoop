@@ -1,6 +1,6 @@
-function CreatePerson(name, sex, year) {
+function CreatePerson(name, gender, year) {
     this.name = name; //公開屬性
-    this.sex = sex; //公開屬性
+    this.gender = gender; //公開屬性
     function caclAge(y) { //私有函式
         var today = new Date();
         return today.getFullYear() - y;
@@ -13,9 +13,9 @@ function CreatePerson(name, sex, year) {
 CreatePerson.prototype.showName = function() { //原型方法
     console.log("my name:" + this.name);
 };
-CreatePerson.prototype.showSex = function() { //原型方法
-    console.log("my sex:" + this.sex);
+CreatePerson.prototype.showGender = function() { //原型方法
+    console.log("my gender:" + this.gender);
 };
-var p1 = new CreatePerson("Mark", "man", 1985);
-var p2 = new CreatePerson("Jack", "man", 1978);
+var p1 = new CreatePerson("Mark", "male", 1985);
+var p2 = new CreatePerson("Jack", "male", 1978);
 console.log(p1.age);

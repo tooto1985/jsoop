@@ -1,11 +1,11 @@
 var obj = new Object();
 obj.name = "John";
-obj.sex = "man";
+obj.gender = "male";
 obj.showName = function() {
     console.log("my name:" + this.name);
 };
-obj.showSex = function() {
-    console.log("my sex:" + this.sex);
+obj.showGender = function() {
+    console.log("my gender:" + this.gender);
 };
 obj.showName();
-obj.showSex();
+obj.showGender();

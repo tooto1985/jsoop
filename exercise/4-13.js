@@ -1,6 +1,6 @@
-function CreatePerson(name, sex, year) {
+function CreatePerson(name, gender, year) {
     this.name = name;
-    this.sex = sex;
+    this.gender = gender;
 
 
 
@@ -13,9 +13,9 @@ function CreatePerson(name, sex, year) {
 CreatePerson.prototype.showName = function() {
     console.log("my name:" + this.name);
 };
-CreatePerson.prototype.showSex = function() {
-    console.log("my sex:" + this.sex);
+CreatePerson.prototype.showGender = function() {
+    console.log("my gender:" + this.gender);
 };
-var p1 = new CreatePerson("Mark", "man", 1985);
-var p2 = new CreatePerson("Jack", "man", 1978);
+var p1 = new CreatePerson("Mark", "male", 1985);
+var p2 = new CreatePerson("Jack", "male", 1978);
 console.log(p1.age);
