@@ -2,17 +2,17 @@
 var obj = {
     name: "John",
     age: 30,
-    sex: "man"
+    gender: "male"
 };
 var name = obj.name;
 var age = obj.age;
-var sex = obj.sex;
-console.log(name, age, sex);
+var gender = obj.gender;
+console.log(name, age, gender);
 //es6
 var obj = {
     name: "John",
     age: 30,
-    sex: "man"
+    gender: "male"
 };
-var {name, age, sex} = obj;
-console.log(name, age, sex);
+var {name, age, gender} = obj;
+console.log(name, age, gender);

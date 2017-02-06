@@ -21,4 +21,4 @@ show();
 window.show = function() {
     console.log(this); //window
 };
-show();
+window.show();

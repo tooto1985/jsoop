@@ -1,5 +1,5 @@
 function f(foo, val) {
-    with(foo) {
+    with(foo) { //(Bad)
         console.log(val);
     }
 }

@@ -4,4 +4,4 @@ function Cat() {
         return this.name;
     };
 }
-var car = new Cat();
+var cat = new Cat();

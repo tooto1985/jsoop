@@ -1,3 +1,3 @@
 if (!o) {
-    var o = {};
+    var o = {}; //(Bad)
 }
