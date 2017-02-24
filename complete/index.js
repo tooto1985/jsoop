@@ -23,12 +23,6 @@ document.addEventListener("DOMContentLoaded", function() {
             o.value = o.main + "-" + o.sub;
             option.text = o.value + ".js";
             select.appendChild(option);
-            Object.defineProperty(window, "to" + o.value.replace("-", "_"), {
-                get: function(o) {
-                    location.hash = o.value + ".js";
-                    location.reload();
-                }.bind(this, o)
-            });
         }
     }
     document.body.appendChild(select);
