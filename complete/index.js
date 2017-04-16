@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    var data = [15, 19, 11, 20, 11, [1, 2, 3, 4, 5, 6, 7, 8, 9, "9-2", 10], 33],
+    var data = [15, 18, 11, 20, 11, [1, 2, 3, 4, 5, 6, 7, 8, 9, "9-2", 10], 33],
         hash = location.hash.substr(1),
         option = document.createElement("option"),
         script = document.createElement("script"),
@@ -23,12 +23,6 @@ document.addEventListener("DOMContentLoaded", function() {
             o.value = o.main + "-" + o.sub;
             option.text = o.value + ".js";
             select.appendChild(option);
-            Object.defineProperty(window, "to" + o.value.replace("-", "_"), {
-                get: function(o) {
-                    location.hash = o.value + ".js";
-                    location.reload();
-                }.bind(this, o)
-            });
         }
     }
     document.body.appendChild(select);

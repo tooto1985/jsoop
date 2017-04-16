@@ -9,12 +9,12 @@ Player.prototype.play = function() {
 var scoreboard = {
     element: document.body,
     update: function(score) {
-        var i, msg = "";
-        for (i in score) {
+        var msg = "";
+        for (var i in score) {
             if (score.hasOwnProperty(i)) {
-                msg += "<p><strong>" + i + "<\/strong>:";
+                msg += "<p><b>" + i + "</b>:";
                 msg += score[i];
-                msg += "<\/p>";
+                msg += "</p>";
             }
         }
         this.element.innerHTML = msg;
@@ -36,7 +36,6 @@ var mediator = {
         scoreboard.update(score);
     },
     keypress: function(e) {
-        e = e || window.event;
         for (var player in mediator.Players) {
             player = mediator.Players[player];
             if (e.keyCode === player.key) {
