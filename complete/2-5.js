@@ -1,10 +1,10 @@
-var name = "A";
-var obj = {
-    name: "B",
-    getName: function() {
-        return function() {
-            return this.name;
-        };
+var g;
+function outer() {
+    var a = 100;
+    function inner() {
+        console.log(a);
     }
-};
-console.log(obj.getName()()); //A, 不是B
+    g = inner;
+}
+outer();
+console.log(g()); //100
