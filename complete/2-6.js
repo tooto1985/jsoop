@@ -8,4 +8,5 @@ var obj = {
         };
     }
 };
-console.log(obj.getName()()); //B
+var result = obj.getName();
+console.log(result()); //B
