@@ -1,24 +1,25 @@
-var Coffee = function() {
+function Coffee() {
     this.color = "brown";
-};
-var Milk = function() {
+}
+function Milk() {
     this.color = "white";
-};
-var OrangeJuice = function() {
+}
+function OrangeJuice() {
     this.color = "orange";
 };
-var DrinkShop = function() {
-    this.sellDrink = function(type) {
+function Factory() {
+    this.build = function (type) {
         var drink;
         if (typeof type !== "function") {
-            type = "OrangeJuice"; //Default
+            type = Coffee; //Default
         }
         drink = new type();
-        drink.showColor = function() {
+        drink.showColor = function () {
             console.log("Drink color:" + drink.color);
         };
         return drink;
     };
 };
-var drinkShop = new DrinkShop();
-drinkShop.sellDrink(Milk).showColor(); //Drink color:white
+var factory = new Factory();
+var milk = factory.build(Milk);
+milk.showColor(); //Drink color:white
