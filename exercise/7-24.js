@@ -1,10 +1,7 @@
 //es5
 Object.prototype.inherits = function(superCtor) {
-    var F = function() {};
-    F.prototype = superCtor.prototype;
-    this.prototype = new F();
+    Object.setPrototypeOf(this.prototype, superCtor.prototype);
     this.uber = superCtor.prototype;
-    this.prototype.constructor = this;
 };
 var Shape1 = function(id, x, y) {
     this.id = id;
