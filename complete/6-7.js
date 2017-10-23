@@ -20,9 +20,10 @@ var computer = {
         hdd.write();
     }
 };
-function User() {
-    this.main = function() {
-        computer.work();
-    };
+var user = {
+    main: function() {
+        computer.work(1);
+        computer.work(2);
+    }
 }
-new User().main();
+user.main();

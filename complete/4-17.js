@@ -1,6 +1,21 @@
-var o = new Object(1);
-console.log(o.constructor); //function Number() (不應該有Number的原型方法)
-var o = new Object("text");
-console.log(o.constructor); //function String() (不應該有String的原型方法)
-var o = new Object(true);
-console.log(o.constructor); //function Boolean() (不應該有Boolean的原型方法)
+//相同名稱的函式會被覆蓋
+function getUser() {
+    console.log("a");
+}
+function getUser() {
+    console.log("b");
+}
+getUser(); //"b"
+
+//透過命名空間區分相同的方法名稱
+var ns = {};
+ns.common = {};
+ns.custom = {};
+ns.common.getUser = function() {
+    console.log("a");
+};
+ns.custom.getUser = function() {
+    console.log("b");
+};
+ns.common.getUser(); //"a"
+ns.custom.getUser(); //"b"

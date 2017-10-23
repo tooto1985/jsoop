@@ -1,11 +1,9 @@
-var util = {
-    inherits: function(ctor, superCtor) {
-        var F = function() {};
-        F.prototype = superCtor.prototype;
-        ctor.prototype = new F();
-        ctor.uber = superCtor.prototype;
-        ctor.prototype.constructor = ctor;
-    }
+Object.prototype.inherits = function(superCtor) {
+    var F = function() {};
+    F.prototype = superCtor.prototype;
+    this.prototype = new F();
+    this.uber = superCtor.prototype;
+    this.prototype.constructor = this;
 };
 function A(abc) {
     this.abc = abc || 12;
@@ -17,7 +15,7 @@ A.prototype.show = function() {
 function B() {
     A.apply(this, arguments);
 }
-util.inherits(B, A);
+B.inherits(A);
 var objB = new B();
 B.prototype.square = function() {
     console.log(this.abc * this.abc);

@@ -4,13 +4,7 @@ var egg = (function() {
         length = data.length;
     return {
         next: function() {
-            var element;
-            if (!this.hasNext()) {
-                return null;
-            }
-            element = data[index];
             index = index + 1;
-            return element;
         },
         hasNext: function() {
             return index < length;
