@@ -1,7 +1,7 @@
 //es5
 Object.prototype.inherits = function(superCtor) {
     Object.setPrototypeOf(this.prototype, superCtor.prototype);
-    this.uber = superCtor.prototype;
+    this.super = superCtor.prototype;
 };
 var Shape1 = function(id, x, y) {
     this.id = id;

@@ -1,6 +1,6 @@
 Object.prototype.inherits = function(superCtor) {
     this.prototype = Object.create(superCtor.prototype);
-    this.uber = superCtor.prototype;
+    this.super = superCtor.prototype;
     this.prototype.constructor = this;
 };
 function A(abc) {

@@ -1,7 +1,7 @@
 //Object原型繼承方法
 Object.prototype.inherits = function(superCtor) {
     Object.setPrototypeOf(this.prototype, superCtor.prototype);
-    this.uber = superCtor.prototype;
+    this.super = superCtor.prototype;
 };
 
 //建立Point類別
@@ -32,7 +32,7 @@ RangePoint.prototype.write = function(x,y) {
     x = x > this.max ? this.max : x;
     y = y < this.min ? this.min : y;
     y = y > this.max ? this.max : y;
-    RangePoint.uber.write.apply(this,arguments);
+    RangePoint.super.write.apply(this,arguments);
 };
 var rp = new RangePoint(-50,50);
 rp.write(-100,100);
@@ -46,7 +46,7 @@ IntegerRangePoint.inherits(RangePoint);
 IntegerRangePoint.prototype.write = function(x,y) {
     x = Math.round(x);
     y = Math.round(y);
-    IntegerRangePoint.uber.write.apply(this,arguments);
+    IntegerRangePoint.super.write.apply(this,arguments);
 };
 var irp = new IntegerRangePoint(0,10);
 irp.write(9.1,7.8);
