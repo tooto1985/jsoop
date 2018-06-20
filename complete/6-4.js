@@ -9,7 +9,7 @@ var egg = (function() {
         hasNext: function() {
             return index < length;
         },
-        rewind: function() {
+        first: function() {
             index = 0;
         },
         current: function() {
@@ -17,7 +17,7 @@ var egg = (function() {
         }
     };
 })();
-egg.rewind();
+egg.first();
 while (egg.hasNext()) {
     console.log(egg.current());
     egg.next();

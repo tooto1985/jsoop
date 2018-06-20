@@ -1,9 +1,11 @@
 document.addEventListener("DOMContentLoaded", function() {
-    var data = [15, 18, 11, 20, 11, [1, 2, 3, 4, 5, 6, 7, 8, 9, "9-2", 10], 33],
+    var data = [15, 18, 11, 17, 11, [1, 2, 3, 4, 5, 6, 7, 8, 9, "9-2", 10], 33],
         hash = location.hash.substr(1),
         option = document.createElement("option"),
         script = document.createElement("script"),
         select = document.createElement("select"),
+        prev = document.createElement("button"),
+        next = document.createElement("button"),
         i, imax, j, jmax, o, options;
     select.appendChild(option);
     for (i = 0, imax = data.length; i < imax; i++) {
@@ -25,7 +27,9 @@ document.addEventListener("DOMContentLoaded", function() {
             select.appendChild(option);
         }
     }
+    document.body.appendChild(prev);
     document.body.appendChild(select);
+    document.body.appendChild(next);
     options = select.options;
     if (hash) {
         script.src = hash;
@@ -40,4 +44,26 @@ document.addEventListener("DOMContentLoaded", function() {
         location.href = location.href.split("#")[0] + "#" + this.value;
         location.reload();
     });
+    prev.innerText = "Prev";
+    next.innerText = "Next";
+    prev.addEventListener("click", function() {
+        var ary = [].slice.call(options);
+        var index = ary.indexOf(ary.filter(function(a) {
+            return a.text == select.value;
+        })[0])-1;
+        if (index > -1) {
+            select.value = ary[index].text;
+            select.dispatchEvent(new Event("change"));
+        }
+    });
+    next.addEventListener("click", function() {
+        var ary = [].slice.call(options);
+        var index = ary.indexOf(ary.filter(function(a) {
+            return a.text == select.value;
+        })[0])+1;
+        if (index < ary.length) {
+            select.value = ary[index].text;
+            select.dispatchEvent(new Event("change"));
+        }
+    });    
 });

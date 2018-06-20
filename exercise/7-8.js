@@ -1,8 +1,8 @@
 //es5
 function link1(height, color, url) {
-    var height = height || 50;
-    var color = color || "red";
-    var url = url || "http://www.abc.com";
+    var height = height !== undefined ? height : 50;
+    var color = color !== undefined ? color : "red";
+    var url = url !== undefined ? url : "http://www.abc.com";
     console.log(height, color, url);
 }
 link1(null, "Blue");

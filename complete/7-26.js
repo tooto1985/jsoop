@@ -1,7 +1,6 @@
 //es5
-var Rectangle1 = function(width, height) {
+var Rectangle1 = function(width) {
     this._width = width;
-    this._height = height;
 };
 Rectangle1.prototype = {
     set width(width) {
@@ -9,24 +8,15 @@ Rectangle1.prototype = {
     },
     get width() {
         return this._width;
-    },
-    set height(height) {
-        this._height = height;
-    },
-    get height() {
-        return this._height;
-    },
-    get area() {
-        return this._width * this._height;
     }
 };
-var r = new Rectangle1(50, 20);
-console.log(r.area === 1000);
+var r = new Rectangle1(50);
+r.width = 1000;
+console.log(r.area);
 //es6
 class Rectangle2 {
-    constructor(width, height) {
+    constructor(width) {
         this._width = width
-        this._height = height
     }
     set width(width) {
         this._width = width
@@ -34,15 +24,7 @@ class Rectangle2 {
     get width() {
         return this._width
     }
-    set height(height) {
-        this._height = height
-    }
-    get height() {
-        return this._height
-    }
-    get area() {
-        return this._width * this._height
-    }
 }
-var r = new Rectangle2(50, 20)
-console.log(r.area === 1000);
+var r = new Rectangle2(50)
+r.width = 1000;
+console.log(r.area);
