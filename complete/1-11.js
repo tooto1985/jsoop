@@ -1,6 +1,6 @@
 function run() {
     try {
-        throw Error("oops");
+        console.log(a);
     } catch(e) {
         console.log(e.message);
     }
