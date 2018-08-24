@@ -12,7 +12,7 @@ Rectangle1.prototype = {
 };
 var r = new Rectangle1(50);
 r.width = 1000;
-console.log(r.area);
+console.log(r.width);
 //es6
 class Rectangle2 {
     constructor(width) {
@@ -27,4 +27,4 @@ class Rectangle2 {
 }
 var r = new Rectangle2(50)
 r.width = 1000;
-console.log(r.area);
+console.log(r.width);

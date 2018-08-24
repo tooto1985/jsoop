@@ -1,3 +1,3 @@
 (function(window, document) {
-    // code
+    console.log(window, document);
 })(window, document);

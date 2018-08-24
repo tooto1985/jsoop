@@ -2,9 +2,9 @@ function run() {
     try {
         return "abc";
     } finally{
-        console.log(0);
+        console.log("xyz");
     }
 }
 console.log(run());
-//0
+//"xyz"
 //"abc"
