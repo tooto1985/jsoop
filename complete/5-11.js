@@ -1,5 +1,5 @@
-//Object原型繼承方法
-Object.prototype.inherits = function(superCtor) {
+//prototype原型繼承方法
+Function.prototype.inherits = function(superCtor) {
     Object.setPrototypeOf(this.prototype, superCtor.prototype);
     this.super = superCtor.prototype;
 };

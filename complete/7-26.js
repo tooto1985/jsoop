@@ -1,5 +1,5 @@
 //es5
-var Rectangle1 = function(width) {
+function Rectangle1(width) {
     this._width = width;
 };
 Rectangle1.prototype = {

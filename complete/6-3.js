@@ -1,25 +1,33 @@
+Function.prototype.inherits = function(superCtor) {
+    Object.setPrototypeOf(this.prototype, superCtor.prototype);
+    this.super = superCtor.prototype;
+};
+
+function Drink() {
+}
+Drink.prototype.showColor = function() {
+    console.log("Drink color:" + this.color);
+};
+
 function Coffee() {
     this.color = "brown";
 }
+Coffee.inherits(Drink);
+
 function Milk() {
     this.color = "white";
 }
+Milk.inherits(Drink);
+
 function OrangeJuice() {
     this.color = "orange";
+}
+OrangeJuice.inherits(Drink);
+
+var factory = {
+    build: function (type) {
+        return new type();
+    }
 };
-function Factory() {
-    this.build = function (type) {
-        var drink;
-        if (typeof type !== "function") {
-            type = Coffee; //Default
-        }
-        drink = new type();
-        drink.showColor = function () {
-            console.log("Drink color:" + drink.color);
-        };
-        return drink;
-    };
-};
-var factory = new Factory();
 var milk = factory.build(Milk);
 milk.showColor(); //Drink color:white

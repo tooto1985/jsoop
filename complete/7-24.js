@@ -1,9 +1,9 @@
 //es5
-Object.prototype.inherits = function(superCtor) {
+Function.prototype.inherits = function(superCtor) {
     Object.setPrototypeOf(this.prototype, superCtor.prototype);
     this.super = superCtor.prototype;
 };
-var Shape1 = function(id, x, y) {
+function Shape1(id, x, y) {
     this.id = id;
     this.move(x, y);
 };
@@ -11,13 +11,13 @@ Shape1.prototype.move = function(x, y) {
     this.x = x;
     this.y = y;
 };
-var Rectangle1 = function(id, x, y, width, height) {
+function Rectangle1(id, x, y, width, height) {
     Shape1.call(this, id, x, y);
     this.width = width;
     this.height = height;
 };
 Rectangle1.inherits(Shape1);
-var Circle1 = function(id, x, y, radius) {
+function Circle1(id, x, y, radius) {
     Shape1.call(this, id, x, y);
     this.radius = radius;
 };

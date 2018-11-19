@@ -1,24 +1,24 @@
-var MessageCenter = {
-    list: {},
+var messageCenter = {
+    events: {},
     emit: function(type, message) {
-        if (this.list[type]) {
-            for (var i = 0; i < this.list[type].length; i++) {
-                this.list[type][i].callback(message);
+        if (this.events[type]) {
+            for (var i = 0; i < this.events[type].length; i++) {
+                this.events[type][i].callback(message);
             }
         }
     },
     on: function(obj, type, callback) {
-        this.list[type] = this.list[type] || [];
-        this.list[type].push({
+        this.events[type] = this.events[type] || [];
+        this.events[type].push({
             obj: obj,
             callback: callback
         });
     },
     off: function(obj, type) {
-        if (this.list[type]) {
-            for (var i = 0; i < this.list[type].length; i++) {
-                if (this.list[type][i].obj === obj) {
-                    this.list[type].splice(i,1);
+        if (this.events[type]) {
+            for (var i = 0; i < this.events[type].length; i++) {
+                if (this.events[type][i].obj === obj) {
+                    this.events[type].splice(i,1);
                     i--;
                 }
             }
@@ -34,20 +34,20 @@ User.prototype.addEvent = function(type, callback) {
 User.prototype.removeEvent = function(type) {
     this.messageCenter.off(this, type);
 };
-var UserA = new User(MessageCenter);
+var UserA = new User(messageCenter);
 UserA.addEvent("todo", function(msg) {
     console.log("UserA todo:" + msg);
 });
 UserA.addEvent("test", function(msg) {
     console.log("UserA test:" + msg);
 });
-var UserB = new User(MessageCenter);
+var UserB = new User(messageCenter);
 UserB.addEvent("todo", function(msg) {
     console.log("UserB todo:" + msg);
 });
-var UserC = new User(MessageCenter);
+var UserC = new User(messageCenter);
 UserC.addEvent("test", function(msg) {
     console.log("UserC test:" + msg);
 });
-MessageCenter.emit("todo", "News");
-MessageCenter.emit("test", "Word");
+messageCenter.emit("todo", "News");
+messageCenter.emit("test", "Word");

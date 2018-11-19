@@ -7,7 +7,7 @@ Player.prototype.play = function() {
     mediator.played();
 };
 var scoreboard = {
-    element: document.body,
+    el: document.body,
     update: function(score) {
         var msg = "";
         for (var i in score) {
@@ -17,29 +17,29 @@ var scoreboard = {
                 msg += "</p>";
             }
         }
-        this.element.innerHTML = msg;
+        this.el.innerHTML = msg;
     }
 };
 var mediator = {
-    Players: {},
+    users: {},
     add: function(key, obj) {
-        this.Players[obj.name] = {
+        this.users[obj.name] = {
             key: key,
             obj: obj
         };
     },
     played: function() {
         var score = {};
-        for (var player in this.Players) {
-            score[player] = this.Players[player].obj.points;
+        for (var user in this.users) {
+            score[user] = this.users[user].obj.points;
         }
         scoreboard.update(score);
     },
     keypress: function(e) {
-        for (var player in mediator.Players) {
-            player = mediator.Players[player];
-            if (e.keyCode === player.key) {
-                player.obj.play();
+        for (var user in mediator.users) {
+            user = mediator.users[user];
+            if (e.keyCode === user.key) {
+                user.obj.play();
                 return;
             }
         }

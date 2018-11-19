@@ -1,5 +1,5 @@
 //es5
-var Shape1 = function(id, x, y) {
+function Shape1(id, x, y) {
     this.id = id;
     this.move(x, y);
 };
