@@ -1,4 +1,4 @@
-var egg = (function() {
+var iterator = (function() {
     var index = 0,
         data = [1, 2, 3, 4, 5],
         length = data.length;
@@ -17,8 +17,8 @@ var egg = (function() {
         }
     };
 })();
-egg.first();
-while (egg.hasNext()) {
-    console.log(egg.current());
-    egg.next();
+iterator.first();
+while (iterator.hasNext()) {
+    console.log(iterator.current());
+    iterator.next();
 }

@@ -4,25 +4,25 @@ var car = {
     run: function() {console.log("加速");}
 };
 function ProxyCar(car) {
-    var isStarted = false;
+    var isStart = false;
     this.start = function() {
-        if (isStarted) {
+        if (isStart) {
             console.log("引擎已經發動");
         } else {
             car.start();
-            isStarted = true;
+            isStart = true;
         }
     };
     this.stop = function() {
-        if (!isStarted) {
+        if (!isStart) {
             console.log("引擎已經關閉");
         } else {
             car.stop();
-            isStarted = false;
+            isStart = false;
         }
     };
     this.run = function() {
-        if (!isStarted) {
+        if (!isStart) {
             console.log("尚未發動引擎");
         } else {
             car.run();
