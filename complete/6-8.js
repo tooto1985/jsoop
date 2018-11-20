@@ -1,36 +1,36 @@
 var car = {
-    startEngine: function() {console.log("startEngine");},
-    stopEngine: function() {console.log("stopEngine");},
-    run: function() {console.log("run");}
+    start: function() {console.log("發動");},
+    stop: function() {console.log("關閉");},
+    run: function() {console.log("加速");}
 };
 function ProxyCar(car) {
-    var isStarted = false;
-    this.startEngine = function() {
-        if (isStarted) {
-            console.log("It is already started!");
+    var isStart = false;
+    this.start = function() {
+        if (isStart) {
+            console.log("引擎已經發動");
         } else {
-            car.startEngine();
-            isStarted = true;
+            car.start();
+            isStart = true;
         }
     };
-    this.stopEngine = function() {
-        if (!isStarted) {
-            console.log("It is already stopped!");
+    this.stop = function() {
+        if (!isStart) {
+            console.log("引擎已經關閉");
         } else {
-            car.stopEngine();
-            isStarted = false;
+            car.stop();
+            isStart = false;
         }
     };
     this.run = function() {
-        if (!isStarted) {
-            console.log("You have to start the engine first!");
+        if (!isStart) {
+            console.log("尚未發動引擎");
         } else {
             car.run();
         }
     };
 }
 var proxyCar = new ProxyCar(car);
-proxyCar.run(); //You have to start the engine first!
-proxyCar.stopEngine(); //It is already stopped!
-proxyCar.startEngine(); //startEngine
-proxyCar.run(); //run
+proxyCar.run(); //尚未發動引擎
+proxyCar.stop(); //引擎已經關閉
+proxyCar.start(); //發動
+proxyCar.run(); //加速

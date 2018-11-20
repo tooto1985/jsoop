@@ -7,7 +7,7 @@ Player.prototype.play = function() {
     mediator.played();
 };
 var scoreboard = {
-    element: document.body,
+    el: document.body,
     update: function(score) {
         var msg = "";
         for (var i in score) {
@@ -17,34 +17,32 @@ var scoreboard = {
                 msg += "</p>";
             }
         }
-        this.element.innerHTML = msg;
+        this.el.innerHTML = msg;
     }
 };
 var mediator = {
-    Players: {},
-    setUp: function() {
-        var Players = this.Players;
-        Players.home = new Player("Home");
-        Players.guest = new Player("Guest");
+    users: {},
+    init: function() {
+        this.users.home = new Player("Home");
+        this.users.guest = new Player("Guest");
     },
     played: function() {
-        var Players = this.Players,
-            score = {
-                Home: Players.home.points,
-                Guest: Players.guest.points
-            };
+        var score = {
+            Home: this.users.home.points,
+            Guest: this.users.guest.points
+        };
         scoreboard.update(score);
     },
     keypress: function(e) {
         if (e.keyCode === 48) {
-            mediator.Players.home.play();
+            mediator.users.home.play();
             return;
         }
         if (e.keyCode === 49) {
-            mediator.Players.guest.play();
+            mediator.users.guest.play();
             return;
         }
     }
 };
-mediator.setUp();
+mediator.init();
 window.onkeypress = mediator.keypress;

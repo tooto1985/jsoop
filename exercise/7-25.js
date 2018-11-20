@@ -1,11 +1,11 @@
 //es5
-var Rectangle1 = function(id, x, y, width, height) {
+function Rectangle1(id, x, y, width, height) {
     //...
 };
 Rectangle1.defaultRectangle = function() {
     return new Rectangle1("default", 0, 0, 100, 100);
 };
-var Circle1 = function(id, x, y, width, height) {
+function Circle1(id, x, y, width, height) {
     //...
 };
 Circle1.defaultCircle = function() {

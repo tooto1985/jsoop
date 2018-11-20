@@ -1,8 +1,8 @@
 //es5
-var isNaN = function(n) {
+function isNaN(n) {
     return n !== n;
 };
-var isFinite = function(v) {
+function isFinite(v) {
     return (typeof v === "number" && !isNaN(v) && v !== Infinity && v !== -Infinity);
 };
 console.log(isNaN(42) === false);
