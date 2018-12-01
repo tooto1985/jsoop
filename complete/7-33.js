@@ -24,7 +24,7 @@ function fetchAll(tasks, success, error) {
                 } else {
                     error(data);
                 }
-            })
+            });
         })(i);
     }
 }

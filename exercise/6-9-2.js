@@ -7,7 +7,7 @@ Player.prototype.play = function() {
     mediator.played();
 };
 var scoreboard = {
-    element: document.body,
+    el: document.body,
     update: function(score) {
         var msg = "";
         for (var i in score) {
@@ -17,7 +17,7 @@ var scoreboard = {
                 msg += "</p>";
             }
         }
-        this.element.innerHTML = msg;
+        this.el.innerHTML = msg;
     }
 };
 var mediator = {

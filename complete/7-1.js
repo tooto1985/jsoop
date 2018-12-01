@@ -27,7 +27,7 @@ for (let i = 0; i < 5; i++) {
     console.log(a);
     let a = 1;
 }
-//let其實有hoisting但無法操作(又稱作死區Dead Zone)
+//let其實有hoisting但無法操作(又稱死區Dead Zone)
 {
     let a = 2;
     {
