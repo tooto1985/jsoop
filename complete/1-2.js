@@ -1,6 +1,6 @@
-var a;
-console.log(a); //undefined
-console.log(typeof a); //"undefined";
-a = null;
-console.log(a); //null
-console.log(typeof a); //"object";
+var empty;
+console.log(empty); //undefined
+console.log(typeof empty); //"undefined";
+empty = null;
+console.log(empty); //null
+console.log(typeof empty); //"object";

@@ -1,9 +1,9 @@
-var a="string";
-console.log(typeof a); //"string"
-a.val=100;
-console.log(a.val); //undefined
-var b = new String("string");
-console.log(typeof b); //"object"
-b.val=100;
-console.log(b.val); //100
-console.log(typeof b.valueOf()); //"string"
+var str="string";
+console.log(typeof str); //"string"
+str.val=100;
+console.log(str.val); //undefined
+var obj = new String("string");
+console.log(typeof obj); //"object"
+obj.val=100;
+console.log(obj.val); //100
+console.log(typeof obj.valueOf()); //"string"

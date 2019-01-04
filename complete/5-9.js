@@ -1,5 +1,6 @@
-Object.prototype.inherits = function(superCtor) {
-    var F = function() {};
+Function.prototype.inherits = function(superCtor) {
+    function F() {
+    }
     F.prototype = superCtor.prototype;
     this.prototype = new F();
     this.super = superCtor.prototype;

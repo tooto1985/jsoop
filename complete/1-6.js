@@ -1,5 +1,5 @@
-function run(a, b) {
-    console.log(a); //10
-    console.log(b); //20
+function build(width, height) {
+    console.log(width); //10
+    console.log(height); //20
 }
-run(10, 20, 30);
+build(10, 20, 30);
