@@ -1,11 +1,21 @@
-var a = 5;
-switch (true) {
-    case a < 5:
-        console.log("a<5");
+var n = 1;
+if (n == 1 || n == 2 || n == 3) {
+    console.log("n<=3");
+} else if (n == 4 || n == 5) {
+    console.log("n>3 & n<=5");
+} else {
+    console.log("n>5");
+}
+switch (n) {
+    case 1:
+    case 2:
+    case 3:
+        console.log("n<=3");
         break;
-    case a < 10:
-        console.log("a<10");
+    case 4:
+    case 5:
+        console.log("n>3 & n<=5");
         break;
     default:
-        console.log("other");
+        console.log("n>5");
 }
