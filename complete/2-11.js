@@ -1,11 +1,15 @@
-function m(x) {
-    return function(y) {
-        return x * y;
+function cube(height) {
+    return function(width) {
+        return function(depth) {
+            return height * width * depth;
+        };
     };
 }
-var a = m(2);
-console.log(a(1)); //2
-console.log(a(2)); //4
-console.log(a(3)); //6
-console.log(a(4)); //8
-console.log(a(5)); //10
+console.log(cube(3)(2)(1)); //6
+var square = cube(3);
+var volume = square(2);
+console.log(volume(1)); //6
+console.log(volume(2)); //12
+console.log(volume(3)); //18
+console.log(volume(4)); //24
+console.log(volume(5)); //30

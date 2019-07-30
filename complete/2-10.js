@@ -1,8 +1,8 @@
-function m(x, y) {
-    return x * y;
+function cube(height, width, depth) {
+    return height * width * depth;
 }
-console.log(m(2, 1)); //2
-console.log(m(2, 2)); //4
-console.log(m(2, 3)); //6
-console.log(m(2, 4)); //8
-console.log(m(2, 5)); //10
+console.log(cube(3, 2, 1)); //6
+console.log(cube(3, 2, 2)); //12
+console.log(cube(3, 2, 3)); //18
+console.log(cube(3, 2, 4)); //24
+console.log(cube(3, 2, 5)); //30
