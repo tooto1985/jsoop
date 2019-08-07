@@ -11,5 +11,5 @@ var c = new Obj();
 a.height = 15;
 b.height = 15;
 c.height = 15;
-//可以改成這樣
+//可改成這樣
 Obj.prototype.height = 15;

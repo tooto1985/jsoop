@@ -106,7 +106,7 @@
         }
     }
     run();
-    //在 strict 模式中，函式宣告不可以巢狀在陳述式或區塊內部。它們只可以出現在最上層或直接位於函式主體內。
+    //在 strict 模式中，函式宣告不可巢狀在陳述式或區塊內部。它們只可出現在最上層或直接位於函式主體內。
 })(); //11
 
 (function() {
@@ -133,7 +133,7 @@
         console.log(oneArg);
     }
     testArgs(10);
-    //如果不是在 strict 模式下，您可以變更 arguments[0] 的值來變更 oneArg 參數的值，因此 oneArg 和 arguments[0] 的值都是 20；在 strict 模式下，因為 arguments 物件只是區域複本，所以變更 arguments[0] 的值並不會影響 oneArg 的值。
+    //如果不是在 strict 模式下，您可變更 arguments[0] 的值來變更 oneArg 參數的值，因此 oneArg 和 arguments[0] 的值都是 20；在 strict 模式下，因為 arguments 物件只是區域複本，所以變更 arguments[0] 的值並不會影響 oneArg 的值。
 })(); //14.
 
 (function() {
