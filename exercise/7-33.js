@@ -24,7 +24,7 @@ function fetchAll(tasks, success, error) {
                 } else {
                     error(data);
                 }
-            })
+            });
         })(i);
     }
 }
@@ -81,6 +81,22 @@ asyncTask2(true, 1000).then(result => {
     console.log("依序完成");
 }).catch(err => {
     console.log("err:" + err);
+});
+//非同步依序完成(generator)
+function* queue() {
+    yield asyncTask2(true, 1000)
+    yield asyncTask2(true, 5000)
+    yield asyncTask2(true, 2500)
+}
+var gen = queue();
+gen.next().value.then(result => {
+    console.log(result);
+    gen.next().value.then(result => {
+        console.log(result);
+        gen.next().value.then(result => {
+            console.log(result);
+        });
+    });
 });
 //es7的Async和Await用法
 (async () => {
