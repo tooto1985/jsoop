@@ -5,9 +5,6 @@ switch ("Mark") {
     case "John":
         console.log("John");
         break;
-    case "Tom":
-        console.log("Tom");
-        break;
     default:
         console.log("Other");
 }
