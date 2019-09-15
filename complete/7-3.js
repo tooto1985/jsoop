@@ -1,5 +1,5 @@
 //es5
-Object.defineProperty(typeof global === "object" ? global : window, "DATA1", {
+Object.defineProperty(typeof global === "object" ? global : window, "DATA", {
     value: {
         content: "abc"
     },
@@ -7,11 +7,13 @@ Object.defineProperty(typeof global === "object" ? global : window, "DATA1", {
     writable: false,
     configurable: false
 });
-DATA1.content = "xyz";
-console.log(DATA1.content);
+DATA.content = "xyz";
+console.log(DATA.content);
 //es6
-const DATA2 = {
-    content: "abc"
-};
-DATA2.content = "xyz";
-console.log(DATA2.content);
+{
+    const DATA = {
+        content: "abc"
+    };
+    DATA.content = "xyz";
+    console.log(DATA.content);
+}

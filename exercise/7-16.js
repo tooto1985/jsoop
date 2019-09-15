@@ -10,13 +10,15 @@ var obj = {
 obj.foo(10,30);
 obj.bar(20,40);
 //es6
-var obj = {
+{
+    let obj = {
 
 
 
 
 
 
-};
-obj.foo(10,30);
-obj.bar(20,40);
+    };
+    obj.foo(10,30);
+    obj.bar(20,40);
+}

@@ -5,8 +5,10 @@ var output = input.map(function(value) {
 });
 console.log(output);
 //es6
-var input = [10, 20, 30, 40, 50];
+{
+    let input = [10, 20, 30, 40, 50];
 
 
 
-console.log(output);
+    console.log(output);
+}

@@ -1,11 +1,12 @@
 //es5
 var list = [7, 42];
-var a = list[0] ? list[0] : 1;
-var b = list[1] ? list[1] : 2;
-var c = list[2] ? list[2] : 3;
-var d = list[3] ? list[3] : undefined;
-console.log(a, b, c, d);
+var a = list[0] !== undefined ? list[0] : 1;
+var b = list[1] !== undefined ? list[1] : 2;
+var c = list[2] !== undefined ? list[2] : 3;
+console.log(a, b, c);
 //es6
-var list = [7, 42];
-var [a = 1, b = 2, c = 3, d] = list;
-console.log(a, b, c, d);
+{
+    let list = [7, 42];
+    let [a = 1, b = 2, c = 3] = list;
+    console.log(a, b, c);
+}

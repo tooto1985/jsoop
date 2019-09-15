@@ -19,12 +19,14 @@ var obj = {
 };
 console.log(obj);
 //es6
-var x = 100;
-var y = 200;
-var obj = {
-    x,
-    y,
-    ["x"+x]:x,
-    ["y"+y]:y
-};
-console.log(obj);
+{
+    let x = 100;
+    let y = 200;
+    let obj = {
+        x,
+        y,
+        ["x"+x]:x,
+        ["y"+y]:y
+    };
+    console.log(obj);
+}

@@ -17,8 +17,10 @@ CCCCC\n\
 DDDDD";
 console.log(text);
 //es6
+{
 
 
 
 
-console.log(text);
+    console.log(text);
+}

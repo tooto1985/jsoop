@@ -13,13 +13,15 @@ var age = obj.age;
 var gender = obj.gender;
 console.log(firstName, lastName, age, gender);
 //es6
-var obj = {
-    name: {
-        firstName: "John",
-        lastName: "Lin"
-    },
-    age: 30,
-    gender: "male"
-};
-var {name:{firstName, lastName}, age, gender} = obj;
-console.log(firstName, lastName, age, gender);
+{
+    let obj = {
+        name: {
+            firstName: "John",
+            lastName: "Lin"
+        },
+        age: 30,
+        gender: "male"
+    };
+    let {name:{firstName, lastName}, age, gender} = obj;
+    console.log(firstName, lastName, age, gender);
+}

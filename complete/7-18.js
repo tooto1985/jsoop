@@ -9,10 +9,12 @@ var age = obj.age;
 var gender = obj.gender;
 console.log(name, age, gender);
 //es6
-var obj = {
-    name: "John",
-    age: 30,
-    gender: "male"
-};
-var {name, age, gender} = obj;
-console.log(name, age, gender);
+{
+    let obj = {
+        name: "John",
+        age: 30,
+        gender: "male"
+    };
+    let {name, age, gender} = obj;
+    console.log(name, age, gender);
+}

@@ -5,7 +5,9 @@ var z = item[1];
 item = [z, a];
 console.log(item);
 //es6
-var item = ["a", "z"];
+{
+    let item = ["a", "z"];
 
-item = [z, a];
-console.log(item);
+    item = [z, a];
+    console.log(item);
+}

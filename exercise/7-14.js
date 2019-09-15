@@ -7,10 +7,12 @@ var obj = {
 };
 console.log(obj);
 //es6
-var x = 100;
-var y = 200;
+{
+    let x = 100;
+    let y = 200;
 
 
 
 
-console.log(obj);
+    console.log(obj);
+}

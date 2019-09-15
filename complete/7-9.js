@@ -1,10 +1,12 @@
 //es5
-function run1(a, b) {
+function run(a, b) {
     console.log(arguments);
 }
-run1(10, 20, 30);
+run(10, 20, 30);
 //es6
-function run2(a, ...params) {
-    console.log(a, params);
+{
+    function run(a, ...params) {
+        console.log(a, params);
+    }
+    run(10, 20, 30);
 }
-run2(10, 20, 30);

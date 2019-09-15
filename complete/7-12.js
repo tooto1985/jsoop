@@ -17,8 +17,10 @@ CCCCC\n\
 DDDDD";
 console.log(text);
 //es6
-var text = `AAAAA
+{
+    let text = `AAAAA
 BBBBB
 CCCCC
 DDDDD`;
-console.log(text);
+    console.log(text);
+}
