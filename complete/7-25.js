@@ -1,34 +1,32 @@
 //es5
-function Rectangle1(id, x, y, width, height) {
-    //...
+function Rectangle() {
 };
-Rectangle1.defaultRectangle = function() {
-    return new Rectangle1("default", 0, 0, 100, 100);
+Rectangle.getMaxRadius = function(width, height) {
+    return Math.min(width, height) / 2;
 };
-function Circle1(id, x, y, width, height) {
-    //...
+function Circle() {
 };
-Circle1.defaultCircle = function() {
-    return new Circle1("default", 0, 0, 100);
+Circle.getPerimeter = function(radius) {
+    return radius * 3.1415926;
 };
-var defRectangle = Rectangle1.defaultRectangle();
-console.log(defRectangle);
-var defCircle = Circle1.defaultCircle();
-console.log(defCircle);
+var maxRadius = Rectangle.getMaxRadius(40, 80);
+console.log(maxRadius);
+var perimeter = Circle.getPerimeter(30);
+console.log(perimeter);
 //es6
-class Rectangle2 {
-    //...
-    static defaultRectangle() {
-        return new Rectangle2("default", 0, 0, 100, 100);
+{
+    class Rectangle {
+        static getMaxRadius(width, height) {
+            return Math.min(width, height) / 2;
+        }
     }
-}
-class Circle2 {
-    //...
-    static defaultCircle() {
-        return new Circle2("default", 0, 0, 100);
+    class Circle {
+        static getPerimeter(radius) {
+            return radius * 3.1415926;
+        }
     }
+    let maxRadius = Rectangle.getMaxRadius(40, 80);
+    console.log(maxRadius);
+    let perimeter = Circle.getPerimeter(30);
+    console.log(perimeter);
 }
-var defRectangle = Rectangle2.defaultRectangle();
-console.log(defRectangle);
-var defCircle = Circle2.defaultCircle();
-console.log(defCircle);
